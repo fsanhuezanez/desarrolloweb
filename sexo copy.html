@@ -4,71 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>us01_registro</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 350px;
+      width: 100%;
+    }
+    h2 { text-align: center; margin-bottom: 1rem; color: #333; }
+    input, .btn {
+      width: 100%; padding: 0.7rem; margin: 0.5rem 0;
+      border: 1px solid #ccc; border-radius: 6px;
+    }
+    .btn {
+      background: #4a90e2; color: #fff; border: none; cursor: pointer;
+    }
+    .btn:hover { background: #357abd; }
+    .message { margin-top: .5rem; padding: .6rem; border-radius: 6px; font-size: .9rem; }
+    .success { background: #e6f4ea; color: #2e7d32; }
+    .error { background: #fdecea; color: #c62828; }
+  </style>
 </head>
 <body>
-  <section id="registro">
-    <div class="container">
-      <h2>Registro (Skeleton)</h2>
-      
-      <!-- Formulario de registro simple -->
-      <form>
-        <div class="form-group">
-          <label for="email">Correo electrónico *</label>
-          <input type="text" id="email" placeholder="ejemplo@correo.com">
-        </div>
-        
-        <div class="form-group">
-          <label for="password">Contraseña *</label>
-          <input type="password" id="password" placeholder="mínimo 8 caracteres">
-        </div>
-        
-        <button type="submit" class="btn">Registrarse</button>
-      </form>
-
-      <!-- Bloques de mensajes de ejemplo -->
-      <div class="message success">Registro Exitoso! Ya puedes iniciar sesión.</div>
-      <div class="message error">El correo electrónico ya está en uso.</div>
-      <div class="message error">La contraseña no cumple las políticas.</div>
-      <div class="message error">Complete todos los campos.</div>
-    </div>
-  </section>
+  <div class="card">
+    <h2>Registro</h2>
+    <form>
+      <input type="text" placeholder="Correo electrónico *">
+      <input type="password" placeholder="Contraseña *">
+      <button type="submit" class="btn">Registrarse</button>
+    </form>
+    <div class="message success">✅ Registro exitoso</div>
+    <div class="message error">⚠️ Correo ya en uso</div>
+  </div>
 </body>
 </html>
-
-form-group {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.btn {
-  padding: 0.75rem;
-  background: #4a90e2;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.message {
-  margin-top: 1rem;
-  padding: 0.75rem;
-  border-radius: 6px;
-  display: none; /* en skeleton solo se muestran como referencia */
-}
-
-.message.success {
-  background: #d4edda;
-}
-
-.message.error {
-  background: #f8d7da;
-}
-
